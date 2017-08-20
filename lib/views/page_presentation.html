@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- polyfills for IE11 -->
+    <script>
+      var userAgent = window.navigator.userAgent.toLowerCase();
+      if (userAgent.indexOf('msie') != -1 || userAgent.indexOf('trident') != -1) {
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.23.0/polyfill.min.js';
+        var headElement = document.getElementsByTagName('head')[0];
+        headElement.appendChild(scriptElement);
+      }
+    </script>
+
+    <!-- jQuery -->
+    <script src="//cdn.jsdelivr.net/jquery/3.2.1/jquery.min.js"></script>
+
+    {% if env === 'development' %}
+      <script src="/dll/vendor.dll.js"></script>
+      <script src="{{ webpack_asset('dev').js }}" async></script>
+    {% endif %}
+
+    <script src="{{ webpack_asset('style').js }}"></script>
+    <script src="{{ webpack_asset('style-presentation').js }}"></script>
+    <script src="{{ webpack_asset('commons').js }}" defer></script>
+    <script src="{{ webpack_asset('legacy-presentation').js }}" defer></script>
+
+    <title>{{ path|path2name }} | {{ path }}</title>
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+    <style>
+      {{ customCss() }}
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown data-separator="^\n\n\n">
+          <script type="text/template">
+{{ revision.body|presentation|safe }}
+
+
+
+# おしまい
+          </script>
+        </section>
+      </div>
+    </div>
+
+  </body>
+</html>
