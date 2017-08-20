@@ -1,0 +1,29 @@
+{
+  "app": {
+    "js": "/js/app.54279a2f3a2429c89ef0.bundle.js"
+  },
+  "plugin": {
+    "js": "/js/plugin.685d7dfbca66e97f20af.bundle.js"
+  },
+  "legacy-presentation": {
+    "js": "/js/legacy-presentation.aa863b3a28699f2818a6.bundle.js"
+  },
+  "legacy": {
+    "js": "/js/legacy.a9bfe1a8f9136a0a4f30.bundle.js"
+  },
+  "legacy-form": {
+    "js": "/js/legacy-form.61a0769d974c0556ddba.bundle.js"
+  },
+  "legacy-admin": {
+    "js": "/js/legacy-admin.c61c84b5047d58a5b971.bundle.js"
+  },
+  "commons": {
+    "js": "/js/commons.124ddbca0286782d5a64.bundle.js"
+  },
+  "style": {
+    "js": "/js/style.c4c4adc7459a4b116986.bundle.js"
+  },
+  "style-presentation": {
+    "js": "/js/style-presentation.3242b4296c50183a7fc1.bundle.js"
+  }
+}
