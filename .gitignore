@@ -7,7 +7,6 @@ npm-debug.log.*
 .DS_Store
 .Trash-*
 ehthumbs.db
-Icon?
 Thumbs.db
 
 # Node Files #
@@ -17,7 +16,6 @@ npm-debug.log
 /npm-debug.log.*
 
 # Dist #
-/public/
 /src/*/__build__/
 /__build__/**
 /src/*/dist/
